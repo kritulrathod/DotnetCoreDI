@@ -7,7 +7,9 @@ namespace DotnetCoreDI
     {
       string product = string.Empty;
 
+      // Poor Man's Dependency Injection
       var productStockRepository = new ProductStockRepository();
+
       IOrderManager orderManager = new OrderManager(
         productStockRepository,
         new PaymentProcessor(),
