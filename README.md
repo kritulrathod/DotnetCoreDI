@@ -1,6 +1,6 @@
 # DotnetCoreDI
 
-In this demo we start with a poor man's dependency injection implementation for a Dotnet Core Console Application.
+In this demo, I will start with a poor man's dependency injection implementation for a Dotnet Core Console Application and use Microsoft version of Dependency Injection Container.
 
 ```
       // Poor Man's Dependency Injection
