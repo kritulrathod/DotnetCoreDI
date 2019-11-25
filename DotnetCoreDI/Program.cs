@@ -1,20 +1,19 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using Microsoft.Extensions.DependencyInjection;
 namespace DotnetCoreDI
 {
   public class Program
   {
+    public static readonly IServiceProvider Container = new ContainerBuilder().Build();
+
     public static void Main(string[] args)
     {
+
+
       string product = string.Empty;
 
-      // Poor Man's Dependency Injection
-      var productStockRepository = new ProductStockRepository();
-
-      IOrderManager orderManager = new OrderManager(
-        productStockRepository,
-        new PaymentProcessor(),
-        new ShippingProcessor(productStockRepository)
-        );
+      var orderManager = Container.GetService<IOrderManager>();
 
       while (product != "exit")
       {
