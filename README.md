@@ -21,7 +21,7 @@ First, we install the dependency from the nuget package.
 Microsoft.Extensions.DependencyInjection
 ```
 
-Next, add a new class *ContainerBuilder* and register all dependencies for your project.
+Next, add a new class `*ContainerBuilder*` and register all dependencies for your project.
 
 ```
 using Microsoft.Extensions.DependencyInjection;
